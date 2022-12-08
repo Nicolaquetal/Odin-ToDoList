@@ -1,12 +1,119 @@
 <!DOCTYPE html>
- <html>
-   <head>
-     <meta charset="utf-8" />
-     <title>Getting Started</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module" defer></script> 
     
-   </head>
-   <body>
     
-    <script src="main.js"></script>
-   </body>
- </html>
+    <title>To Do List</title>
+</head>
+<body>
+    <div id="menu">
+        <div id="menuLeft">
+            <div class="menu"><img src="./Assets/menu.svg" alt="" class="iconMenu" id="menuIcon"></div>
+            <div class="menu"><img src="./Assets/home.svg" alt="" class="iconMenu" id="homeIcon"></div>
+        </div>
+        <div id="menutitle">To Do List</div>
+        <div id="today"></div>
+        <divi id="menuRight">
+            
+            <div class="menu"><img src="./Assets/add.svg" alt="" class="iconMenu" id="addIcon"></div>
+            <!--<div class="menu"><img src="./Assets/event.svg" alt="" class="iconMenu" id="eventIcon"></div>-->
+        </div>
+
+    </div>
+    <div id="content">
+        <div id="contentLeft">
+            <div class="leftclickable id001">Inbox</div>
+            
+            <div class="ProjectsTittle">
+                <div id="Projects">Project</div>
+                <div><img src="./Assets/add.svg" class="iconProject" id="addProjectIcon"></div>
+            </div>
+            <form class="form" id="addProjectForm" onsubmit="return false">
+                <label for="NPM">New project's name:</label>
+                <input type="text" class="forminput" name="NPM" id="newProjectName">
+                <div >
+                    <button class="cancel formbtn" id="projectCancel">Cancel</button>
+                    <button class="confirm formbtn" id="projectOK">Ok</button>
+                    
+                </div>
+            </form>
+            <ul id="ProjectsList" style="margin: 0px;">
+                
+
+            </ul>
+           
+           
+        </div>
+        <div id="contentRight">
+
+            <div class="contentHeader">
+                
+                
+                
+            </div>
+            <form class="form2" id="addTaskForm" onsubmit="return false">
+                <label for="NTN">New Task's name:</label>
+                <input type="text" class="forminput2" name="NTN" id="newTaskName">
+
+                <label for="description">Description:</label>
+                <textarea name="description" class="forminput2" id="newTaskDescription" style=" height:300px;">
+                    Description
+                </textarea>
+                <label for="duedate">Due Date</label>
+                <input type="date" class="forminput2" name="duedate" id="newTaskDuedate">
+
+                <label for="priority">Priority</label>
+                <select class="forminput2" name="priority" id="newTaskPriority">
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option> 
+                </select>
+                <label for="project">Project</label>
+                <select  class="forminput2 newTaskProject" name="project" id="newTaskProject">
+                    
+                </select>
+                <div class="btnformtask">
+                    <button class="cancel formTaskbtn" id="taskCancel">Cancel</button>
+                    <button class="confirm formTaskbtn" id="taskOK">Ok</button>   
+                </div>
+            </form>
+            <form class="form2" id="editTaskForm" onsubmit="return false">
+                <div id="idTask"></div>
+                <label for="NTN">New Task's name:</label>
+                <input type="text" class="forminput2" name="NTN" id="editTaskName">
+
+                <label for="description">Description:</label>
+                <textarea name="description" class="forminput2" id="editTaskDescription" style=" height:300px;">
+                    Description
+                </textarea>
+                <label for="duedate">Due Date</label>
+                <input type="date" class="forminput2" name="duedate" id="editTaskDuedate">
+
+                <label for="priority">Priority</label>
+                <select class="forminput2" name="priority" id="editTaskPriority">
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option> 
+                </select>
+                <label for="project">Project</label>
+                <select  class="forminput2 newTaskProject" name="project" id="editTaskProject">
+                    
+                </select>
+                <div class="btnformtask">
+                    <button class="cancel formTaskbtn" id="taskEditCancel">Cancel</button>
+                    <button class="confirm formTaskbtn" id="taskEdit">Ok</button>   
+                </div>
+            </form>
+           
+
+
+        </div>
+    </div>
+    
+</body>
+</html>
